@@ -1,0 +1,17 @@
+name: snappy-hello # the name of the snap
+version: 0.1 # the version of the snap
+# The vendor for the snap (replace 'Vendor <email@example.com>')
+vendor: mutse <yyhoo2.young@gmail.com>
+binaries:
+    snappy-hello:
+        exec: ./bin/snappy-hello
+summary: Snappy Hello Demo # 79 char long summary
+description: This is a demo of snappy package # A longer description for the snap
+icon: icon.png # A path to an icon for the package
+
+parts:
+    snappy-hello:
+        type: python2-project
+        source: .
+    make-project:
+        source: .
