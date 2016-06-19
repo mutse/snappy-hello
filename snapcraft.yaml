@@ -6,12 +6,13 @@ icon: icon.png # A path to an icon for the package
 
 apps:
     snappy-hello:
-        command: ./bin/snappy-hello
+        command: usr/bin/python $SNAP/bin/snappy-hello
 
 parts:
     snappy-hello:
         plugin: python2
         source: .
+        build-packages: [gcc, python-dev, libc6-dev]
     make-project:
         plugin: make
         source: .
